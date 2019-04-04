@@ -1,0 +1,11 @@
+
+{% extends "market/header.html" %}
+{% block content %}
+<h1>{{ user.username }}</h1>
+	{% for item in items %}
+		{% if item.user_id == user.id %}
+			<a href="http://127.0.0.1:8000/{{item.id}}">{{ item.title}}</a>
+		{% endif %}
+	{% endfor %}
+	<a href="">Sell</a>
+{% endblock %}

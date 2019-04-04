@@ -1,0 +1,9 @@
+{% extends "market/header.html" %}
+
+{% block content %}
+  <h3>{{item.title}}</h3>
+  <h6>{{item.price}}</h6>
+  {{item.description|safe|linebreaks}}
+
+  <input type=button value="Buy" onclick="location.href='http://127.0.0.1:8000/login/'"/>
+{% endblock %}
